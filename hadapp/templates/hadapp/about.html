@@ -1,0 +1,59 @@
+{% extends 'hadapp/layout.html' %}
+
+{% load static %}
+
+{% block body %}
+
+<section id="aboutSect">
+    <h2>About Us</h2>
+    <p class="subHead">We are a team of innovative professionals dedicated to providing cutting-edge business solutions. Our mission is to help businesses thrive in a dynamic and ever changing market through our top-notch POS software, app development, and web design services.</p>
+    <div class="illustration"><img src="{% static 'hadapp/images/City_skyline.svg' %}" alt="city skyline"></div>
+    <h2>Our Mission</h2>
+    <p class="subHead">At HAD, we are committed to empowering businesses of all sizes to achieve their full potential. We strive to deliver the best business solutions in the market through our reliable POS software, expert app development, and top-notch web design services. Our goal is to help businesses succeed and grow by providing them with the tools they need to thrive in a competitive market.</p>
+    <div class="unlockSect">
+        <div class="text"><p>Unlock your business's potential with our expert solutions</p></div>
+        <div class="illustration"><img src="{% static 'hadapp/images/Office_worker.svg' %}" alt="office work"></div>
+    </div>
+</section>
+
+<section id="teamSect">
+    <h3>Our Team</h3>
+    <h6>Meet the team behind HAD's innovative solutions</h6>
+    <div class="teamWrapper">
+        <div class="member">
+            <div class="memAvatar"><img src="" alt=""></div>
+            <div class="memInfo">
+                <h6 class="memName">Amos Ahindukha</h6>
+                <p class="memRank">CEO</p>
+            </div>
+        </div>
+
+        <div class="member">
+            <div class="memAvatar"><img src="" alt=""></div>
+            <div class="memInfo">
+                <h6 class="memName">Bradley Shazima</h6>
+                <p class="memRank">Web Designer</p>    
+            </div>
+        </div>
+
+        <div class="member">
+            <div class="memAvatar"><img src="" alt=""></div>
+            <div class="memInfo">
+                <h6 class="memName">Shaun Darren</h6>
+                <p class="memRank">Tech Support</p>    
+            </div>
+        </div>
+
+        <div class="member">
+            <div class="memAvatar"><img src="" alt=""></div>
+            <div class="memInfo">
+                <h6 class="memName">Wayne Denzel</h6>
+                <p class="memRank">Android Developer</p>    
+            </div>
+        </div>
+    </div>
+</section>
+
+{% include 'hadapp/getstarted.html' %}
+
+{% endblock body %}

@@ -1,0 +1,119 @@
+{% extends 'hadapp/layout.html' %}
+
+{% load static %}
+
+{% block body %}
+
+<section id="prices">
+    <h1>Services</h1>
+    <h4>Innovative solutions tailored to your business requirements</h4>
+
+    <div class="pricesWrapper">
+        <div class="appDevCard">
+            <h3>App Development</h3>
+            <p class="price"><span>FROM KSH</span>20k</p>
+            <p class="desc">Android apps for businesses, e-commerce apps, trading apps, etc.</p>
+            <button class="trans_button">Choose Plan</button>
+        </div>
+
+        <div class="webDevCard">
+            <h3>Web Design</h3>
+            <p class="price"><span>FROM KSH</span>10k</p>
+            <p class="desc">Full stack websites, blogs, E-commerce sites, etc.</p>
+            <button class="blue_button">Choose Plan</button>
+        </div>
+
+        <div class="androidAppCard">
+            <h3>POS App</h3>
+            <p class="price">Free</p>
+            <p class="desc">Get our free android app POS software today.</p>
+            <button class="trans_button">Download App</button>
+        </div>
+    </div>
+</section>
+
+<section id="features">
+    <div class="headerTxt"><h2>Compare features</h2></div>
+
+    <div class="allFeatures">
+        <div class="devFeatures">
+            <h3>App Development</h3>
+            <ul>
+                <li><i class="fa-solid fa-check"></i><span>Cross-platform compatibility for iOS and Android devices</span></li>
+                <li><i class="fa-solid fa-check"></i><span>Integration with third-party APIs and databases</span></li>
+                <li><i class="fa-solid fa-check"></i><span>Customizable features to meet your specific needs</span></li>
+                <li><i class="fa-solid fa-check"></i><span>User-friendly interface and intuitive design</span></li>
+                <li><i class="fa-solid fa-check"></i><span>Ongoing maintenance and support for optimal performance</span></li>
+            </ul>
+        </div>
+
+        <div class="webFeatures">
+            <h3>Web Design</h3>
+            <ul>
+                <li><i class="fa-solid fa-check"></i><span>User-friendly interface and navigation</span></li>
+                <li><i class="fa-solid fa-check"></i><span>Search engine optimization (SEO)</span></li>
+                <li><i class="fa-solid fa-check"></i><span>Ongoing maintenance and support</span></li>
+                <li><i class="fa-solid fa-check"></i><span>Integration with social media</span></li>
+                <li><i class="fa-solid fa-check"></i><span>Customizable and responsive designs</span></li>
+            </ul>
+        </div>
+
+
+        <div class="appFeatures">
+            <h3>POS App</h3>
+            <ul>
+                <li><i class="fa-solid fa-check"></i><span>Sales tracking</span></li>
+                <li><i class="fa-solid fa-check"></i><span>Inventory management</span></li>
+                <li><i class="fa-solid fa-check"></i><span>Customer management</span></li>
+                <li><i class="fa-solid fa-check"></i><span>Payment processing</span></li>
+                <li><i class="fa-solid fa-check"></i><span>Reporting and analytics</span></li>
+                <li><i class="fa-solid fa-check"></i><span>Employee management</span></li>
+                <li><i class="fa-solid fa-check"></i><span>Customizable interface</span></li>
+                <li><i class="fa-solid fa-check"></i><span>Multi-location support</span></li>
+                <li><i class="fa-solid fa-check"></i><span>Integration with other business software</span></li>
+                <li><i class="fa-solid fa-check"></i><span>Offline mode</span></li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section id="freQs">
+    <div class="illustration"><img src="{% static 'hadapp/images/FAQs.svg' %}" alt="FAQs"></div>
+    <h2>Frequently asked questions</h2>
+    <ul class="questList">
+        <li class="quest"><span>How does this work?<i class="fa-solid fa-chevron-down"></span></i>
+            <div class="answer">
+                <p>HAD offers a range of services including web design, digital marketing, and point of sale software. To get started, simply choose the service you're interested in and reach out to our team to discuss your needs. We'll work with you to create a customized solution that meets your business goals and budget. Our process includes a detailed consultation, design and development, testing, and ongoing support to ensure your satisfaction.</p>
+            </div>
+        </li>
+        <li class="quest"><span>Is there a free trial period for HAD's services?<i class="fa-solid fa-chevron-down"></i></span>
+            <div class="answer">
+                <p>HAD does not offer a free trial period for its services. However, we do offer a detailed consultation to ensure that we fully understand your needs and provide the best solution possible. We also offer ongoing support and training to ensure that you are satisfied with our services. If you have any questions or concerns about our services, please don't hesitate to contact our customer support team.</p>
+            </div>
+        </li>
+        <li class="quest"><span>How can I contact HAD's customer support team?<i class="fa-solid fa-chevron-down"></i></span>
+            <div class="answer">
+                <p>You can contact HAD's customer support team through multiple channels including phone, email, or live chat. Our team is available to answer any questions or concerns you may have and provide support throughout the process. We pride ourselves on our excellent customer service and strive to provide prompt and helpful support to all our clients.</p>
+            </div>
+        </li>
+        <li class="quest"><span>What are HAD's pricing plans for its services?<i class="fa-solid fa-chevron-down"></i></span>
+            <div class="answer">
+                <p>HAD's pricing plans vary depending on the service and the scope of the project. We offer customized solutions tailored to your business needs and budget. Our team will work with you to determine the most cost-effective solution to achieve your business goals. We believe in transparency and provide a detailed quote upfront, so there are no surprises or hidden fees.</p>
+            </div>
+        </li>
+        <li class="quest"><span>What is HAD's POS software, and how does it work?<i class="fa-solid fa-chevron-down"></i></span>
+            <div class="answer">
+                <p>HAD's POS software is a point of sale solution designed to help businesses manage their sales, inventory, and customer data. Our software is customizable to fit the specific needs of your business and is compatible with a wide range of hardware devices. With our software, you can track sales, manage inventory, and generate reports to help you make informed business decisions. Our team also provides ongoing support and training to ensure that you get the most out of our software.</p>
+            </div>
+        </li>
+        <li class="quest"><span>What types of businesses does HAD's web design services cater to?<i class="fa-solid fa-chevron-down"></i></span>
+            <div class="answer">
+                <p>HAD's web design services cater to businesses of all sizes and industries. We work with startups, small businesses, and large corporations to create custom websites that are tailored to their specific needs. Our team has experience in a wide range of industries, including healthcare, finance, retail, and more. We work closely with our clients to ensure that their website not only looks great but also delivers measurable results, such as increased website traffic and conversions.</p>
+            </div>
+        </li>
+    </ul>
+</section>
+
+{% include 'hadapp/getstarted.html' %}
+
+{% endblock body %}

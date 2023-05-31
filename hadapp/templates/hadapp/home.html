@@ -1,0 +1,124 @@
+{% extends 'hadapp/layout.html' %}
+
+{% load static %}
+
+{% block body %}
+
+<section id="hero">
+    <div class="textSide">
+        <h1>All your IT Business solutions in one place</h1>
+        <p>We have what you need to kick start your business and tools to help you track your sales and run your business online to reach your potential customers</p>
+        <div class="buttons">
+            <button class="blue_button" onclick="window.location.href = 'services.html';">Get Started</button>
+            <button class="trans_button" onclick="window.location.href = 'services.html#features';">View Our Products</button>
+        </div>
+    </div>
+    <div class="illustrationSide">
+        <img src="{% static 'hadapp/images/Hero_illustration.svg' %}" alt="Hero_illustration">
+    </div>
+</section>
+
+<section id="overview">
+    <div class="overview">
+        <div class="text">
+            <h2>Complete Customizable Business Solutions</h2>
+            <p>Maximize your business's potential with our user-friendly solutions and streamline your operations with the best POS software, beautifully designed websites and top-tier apps from our team.</p>
+            <button class="blue_button" onclick="window.location.href = 'services.html';">Get Started</button>
+        </div>
+        <div class="illustration">
+            <img src="{% static 'hadapp/images/Starting_business.svg' %}" alt="">
+        </div>
+    </div>
+</section>
+
+<section id="appSect">
+    <div class="section">
+        <div class="illustration">
+            <img src="{% static 'hadapp/images/App_data.svg' %}" alt="">
+        </div>
+        <div class="text">
+            <h3>HAD POS MOBILE APP</h3>
+            <h2>Introducing HAD's Mobile POS software</h2>
+            <p>Get started today with our affordable, reliable, and user-friendly Mobile POS app - a flexible solution for managing payments and tracking sales on-the-go. Try it today and take control of your business from anywhere.
+                Available on Google Playstore.</p>
+            <a href="#"><img src="{% static 'hadapp/images/Google_play.svg' %}" alt="Google_play"></a>
+        </div>
+    </div>
+</section>
+
+<section id="devSect">
+    <div class="section">
+        <div class="text">
+            <h3>WEB DESIGN & APP DEVELOPMENT</h3>
+            <h2>Expert Web Design and App Development for Your Business</h2>
+            <p>Our expert team provides custom web design and app development solutions to meet your unique business needs. Elevate your online presence with our creative and innovative services.</p>
+            <button class="trans_button" onclick="window.location.href = '{% url 'services' %}#features';">Explore Our Plans</button>
+        </div>
+        <div class="illustration">
+            <img src="{% static 'hadapp/images/Website_creator.svg' %}" alt="">
+        </div>
+    </div>
+</section>
+
+<section id="community">
+    <div class="overview">
+        <div class="text">
+            <h2>Why join our community?</h2>
+            <p>Discover the benefits of joining our community of entrepreneurs and innovators. Get access to exclusive resources, events, and expert advice to help your business thrive.</p>
+            <button class="blue_button" onclick="window.location.href = 'contact.html#newsletter';">Join Us Now</button>
+        </div>
+        <div class="illustration">
+            <img src="{% static 'hadapp/images/Group_chat.svg' %}" alt="">
+        </div>
+    </div>
+</section>
+
+<section id="testimonials">
+    <h2>Testimonials</h2>
+    <h6>Hear from our happy clients. Discover their success stories</h6>
+        <div class="cards">
+            <div class="reviewCard">
+                <p>The app development team at HAD Corp exceeded our expectations. The final product was amazing!</p>
+                <div class="ratingStars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <h4 class="userName">Amos Ahindukha</h4>
+                <span class="rank">Lead Programmer, AAKenya</span>
+            </div>
+            <div class="reviewCard">
+                <p>HAD POS software is a game changer for our business. It's reliable and user-friendly!</p>
+                <div class="ratingStars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <h4 class="userName">Henry Shikoli</h4>
+                <span class="rank">Sales Manager, SimbaPos</span>
+            </div>
+            <div class="reviewCard">
+                <p>I love working with HAD Corp! Their team is professional, responsive and always delivers on time.</p>
+                <div class="ratingStars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <h4 class="userName">Branton Mabonga</h4>
+                <span class="rank">Intern, NetWave Solutions</span>
+            </div>
+        </div>
+</section>
+
+<section id="getStarted">
+
+{% include 'hadapp/getstarted.html' %}
+
+
+{% endblock body %}

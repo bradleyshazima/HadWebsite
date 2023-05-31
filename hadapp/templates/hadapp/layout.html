@@ -1,0 +1,75 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HADCorp. - All your e-commerce business needs</title>
+    <link rel="stylesheet" href="{% static 'hadapp/css/styles.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navBar">
+        <h2 class="logoText">HADCorp.</h2>
+
+        <ul class="navLinks">
+            <li class="pageLink {% if request.resolver_match.view_name == 'home' %}active{% endif %}">
+                <a href="{% url 'home' %}">Home</a>
+            </li>
+            <li class="pageLink {% if request.resolver_match.view_name == 'services' %}active{% endif %}">
+                <a href="{% url 'services' %}">Services</a>
+            </li>
+            <li class="pageLink {% if request.resolver_match.view_name == 'about' %}active{% endif %}">
+                <a href="{% url 'about' %}">About Us</a>
+            </li>
+            <li class="pageLink {% if request.resolver_match.view_name == 'contact' %}active{% endif %}">
+                <a href="{% url 'contact' %}">Contact</a>
+            </li>
+        </ul>
+
+        <ul class="login">
+            <li><a href="#">Log In</a></li>
+            <li><button>Sign Up</button></li>
+        </ul>
+    </nav>
+
+    {% block body %}
+    
+    {% endblock body %}
+
+    <footer>
+        <div class="titler">
+            <h1>HADCorp.</h1>
+            <span class="copyrightTxt">2023 © HADCorp.
+                All Rights Reserved</span>
+        </div>
+        <ul class="navLinks">
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'services' %}">Services</a></li>
+            <li><a href="{% url 'about' %}">About Us</a></li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
+        </ul>
+        <ul class="socialLinks">
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">GitHub</a></li>
+        </ul>
+        <ul class="terms">
+            <li><a href="#">Privacy policy</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+        </ul>
+        <div class="theme">
+            <button id="themeTweak" onclick="setDarkModeCookie()">Dark Theme</button>
+        </div>
+    </footer>
+
+    <script src="{% static 'hadapp/javascript/script.js' %}"></script>
+    <script src="{% static 'hadapp/javascript/toggle.js' %}"></script>
+</body>
+</html>

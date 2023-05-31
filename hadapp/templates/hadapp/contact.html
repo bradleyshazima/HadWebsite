@@ -1,0 +1,37 @@
+{% extends 'hadapp/layout.html' %}
+
+{% load static %}
+
+{% block body %}
+<section id="msgSect">
+    <h2>Contact Us</h2>
+    <p>Join us in shaping the future. Feel free to get in touch.</p>
+    <div class="msgUs">
+        <div class="illustration"><img src="{% static 'hadapp/images/Contact_Us_girl.svg' %}" alt="contact"></div>
+        <form action="#" id="msgForm">
+            <label for="userName">Full name</label>
+            <input type="text" placeholder="Enter your full name" id="userName" name="userName" required>
+
+            <label for="emailAddress">Email</label>
+            <input type="email" placeholder="Enter your email address" id="emailAddress" name="emailAddress" required>
+
+            <label for="feedBack">Message</label>
+            <textarea name="feedBack" id="feedBack" cols="30" rows="10" placeholder="Leave a review or tell us how we can get better" required></textarea>
+
+            <button type="submit" class="blue_button">Send Message</button>
+
+        </form>
+    </div>
+</section>
+
+<section id="newsletter">
+    <h2>Join Our Newsletter</h2>
+    <p>Subscribe to our newsletter  for exclusive updates and offers.</p>
+    <form action="#" class="newsletterForm">
+        <input type="email" name="newsMail" id="newsMail" class="newsMail" placeholder="Enter your email address" required>
+        <button type="submit" class="newsBtn blue_button" name="news" id="newsBtn">Subscribe</button>
+    </form>
+</section>
+
+
+{% endblock body %}
