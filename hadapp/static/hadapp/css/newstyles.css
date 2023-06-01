@@ -1,0 +1,1004 @@
+/* ROOT VARIABLES FOR COLOURS, FONT AND BOX SHADOWS */
+:root {
+  --text-color: #030303;
+  --element-color: #F1F4FB;
+  --button-color: #3A5985;
+  --background-color: #D9DEE5;
+  --grey-text-color: #90969D;
+  --link-color: #292C2D;
+  --before-element-color: #E2E6ED;
+  --white: #FDFDFD;
+  --Inter: "Inter", sans-serif;
+  --Poppins: "Poppins", sans-serif;
+  --shadow: 0px 4px 32px rgba(51, 51, 51, 0.1);
+}
+
+/* UNIVERSAL ROOT STYLES */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  border: 0;
+  margin: 0;
+  font-family: "Gordita", sans-serif;
+  transition: all 0.3s ease-in-out;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  overflow-x: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+body.darkMode {
+  --background-color: #151718;
+  --text-color: #FDFDFD;
+  --element-color: #292C2D;
+  --button-color: #618FCA;
+  --grey-text-color: #90969D;
+  --link-color: #B2CAEE;
+  --before-element-color: #1D1F20;
+  --shadow: 0px 4px 32px rgba(0, 0, 0, 0.25);
+}
+
+::-webkit-scrollbar { /* Remove the width of the scrollbar */
+  width: 0;
+}
+
+/* Hide scrollbar for Edge */
+@supports (-ms-ime-align: auto) {
+  ::-webkit-scrollbar {
+    width: 0px;
+  }
+}
+::selection {
+  background-color: var(--button-color);
+  border-radius: 12px;
+  color: var(--text-color);
+}
+
+* button { /*Cursor for all button elements*/
+  cursor: pointer;
+}
+
+* ul {
+  list-style: none;
+}
+
+*.blue_button { /*Universal styles for blue-filled buttons*/
+  display: flex;
+  border-radius: 8px;
+  padding: 16px 32px;
+  font-family: var(--Poppins);
+  font-weight: 600;
+  font-size: 16px;
+  margin: 0 8px;
+  background-color: var(--button-color);
+  color: var(--white);
+  align-items: center;
+  justify-content: center;
+}
+
+*.trans_button { /*Universal styles for transparent buttons*/
+  display: flex;
+  border-radius: 8px;
+  padding: 16px 32px;
+  font-family: var(--Poppins);
+  font-weight: 600;
+  font-size: 16px;
+  margin: 0 8px;
+  background-color: transparent;
+  border: 1px solid var(--grey-text-color);
+  color: var(--text-color);
+  align-items: center;
+  justify-content: center;
+}
+
+/*--------------------------------------------STYLING THE NAVBAR----------------------------------------------*/
+nav.navBar {
+  width: 100%;
+  height: 80px;
+  padding: 0 160px;
+  background-color: var(--background-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+}
+nav.navBar .logoText { /*Logo text in the Navbar*/
+  font-size: 28px;
+  font-weight: 600;
+  font-family: var(--Inter);
+  margin-right: 102px;
+}
+nav.navBar .userAccount,
+nav.navBar .theme #themeTweak {
+  height: 36px;
+  width: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  background: transparent;
+  color: var(--text-color);
+}
+nav.navBar .navLinks,
+nav.navBar .userAccount { /*Styles for the unordered lists in the navbar*/
+  display: flex;
+  align-items: center;
+}
+nav.navBar .navLinks .pageLink a { /*Stles for the links*/
+  color: var(--link-color);
+  margin-right: 48px;
+  text-decoration: none;
+  font-family: var(--Inter);
+  font-size: 16px;
+  font-weight: 600;
+  position: relative;
+}
+nav.navBar .navLinks .pageLink a::after { /*Creating a line under the links using an "::after" element*/
+  content: "";
+  width: 40px;
+  height: 2px;
+  background-color: transparent;
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+}
+nav.navBar .navLinks .pageLink.active a { /*Styles for the active navigation links*/
+  color: var(--button-color);
+}
+nav.navBar .navLinks .pageLink.active a::after { /*Stles for the after element of the active link*/
+  background-color: var(--button-color);
+}
+nav.navBar .theme {
+  height: 48px;
+  width: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--before-element-color);
+  box-shadow: var(--shadow);
+}
+nav.navBar .theme #themeTweak {
+  font-size: 24px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+#hero { /*Hero Section*/
+  height: 720px;
+  width: 100%;
+  display: flex;
+  margin-top: 80px;
+}
+#hero .textSide {
+  width: 544px;
+  height: 100%;
+  margin-left: 120px;
+}
+#hero .textSide h1 {
+  font-size: 72px;
+  font-family: var(--Poppins);
+  font-weight: 600;
+  width: 100%;
+  margin: 120px 0 16px 0;
+  line-height: 80px;
+}
+#hero .textSide p {
+  width: 100%;
+  font-size: 20px;
+  font-family: var(--Inter);
+  font-weight: 400;
+}
+#hero .textSide .buttons {
+  display: flex;
+  margin-top: 80px;
+}
+#hero .illustrationSide {
+  width: 520px;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+#hero .illustrationSide img {
+  margin-top: 120px;
+  height: 400px;
+}
+
+#overview,
+#community,
+#getStarted {
+  height: 830px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#overview .overview,
+#community .overview,
+#getStarted .startFrame {
+  width: 1064px;
+  height: 608px;
+  border-radius: 12px;
+  background-color: var(--element-color);
+  padding: 80px;
+  display: flex;
+  box-shadow: var(--shadow);
+  position: relative;
+}
+
+#community .overview {
+  height: 560px;
+}
+#community .overview .illustration img {
+  height: 250px;
+}
+
+#overview .overview::before,
+#community .overview::before,
+#getStarted .startFrame::before {
+  content: "";
+  width: 886px;
+  height: 40px;
+  border-radius: 0 0 12px 12px;
+  position: absolute;
+  bottom: -24px;
+  z-index: -2;
+  background-color: var(--before-element-color);
+  box-shadow: var(--shadow);
+}
+
+#overview .overview .text,
+#community .overview .text,
+#getStarted .startFrame .text {
+  width: 458px;
+  height: 100%;
+}
+
+#overview .overview .text h2,
+#community .overview .text h2,
+#getStarted .startFrame .text h2 {
+  font-family: var(--Poppins);
+  font-weight: 600;
+  font-size: 48px;
+  margin-bottom: 24px;
+  width: 100%;
+}
+
+#overview .overview .text p,
+#community .overview .text p,
+#getStarted .startFrame .text p {
+  font-family: var(--Inter);
+  font-weight: 400;
+  font-size: 20px;
+  width: 100%;
+  margin-bottom: 48px;
+}
+
+#overview .overview .illustration,
+#community .overview .illustration,
+#getStarted .startFrame .illustration {
+  width: calc(100% - 458px);
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#overview .overview .illustration img,
+#community .overview .illustration img,
+#getStarted .startFrame .illustration img {
+  height: 300px;
+}
+
+#appSect,
+#devSect {
+  width: 100%;
+  height: 608px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#appSect .section,
+#devSect .section {
+  width: 1064px;
+  height: 560px;
+  display: flex;
+  padding: 80px;
+  justify-content: space-between;
+  align-items: center;
+}
+#appSect .section .text,
+#devSect .section .text {
+  width: 436px;
+  height: 100%;
+}
+#appSect .section .text h3,
+#devSect .section .text h3 {
+  font-family: var(--Inter);
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--grey-text-color);
+  margin-bottom: 24px;
+}
+#appSect .section .text h2,
+#devSect .section .text h2 {
+  font-family: var(--Poppins);
+  font-weight: 600;
+  font-size: 32px;
+  margin-bottom: 24px;
+}
+#appSect .section .text p,
+#devSect .section .text p {
+  font-family: var(--Inter);
+  font-weight: 400;
+  font-size: 16px;
+  margin-bottom: 48px;
+}
+
+#testimonials {
+  width: 100%;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#testimonials h2 {
+  font-family: var(--Poppins);
+  font-size: 48px;
+  font-weight: 600;
+  margin-top: 72px;
+}
+#testimonials h6 {
+  font-family: var(--Inter);
+  font-weight: 400;
+  font-size: 20px;
+  margin: 12px 0 8px 0;
+}
+#testimonials .cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 120px;
+}
+#testimonials .cards .reviewCard {
+  width: 345px;
+  height: 300px;
+  background-color: var(--element-color);
+  margin: 40px;
+  padding: 48px 48px 24px 48px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: var(--shadow);
+  position: relative;
+}
+#testimonials .cards .reviewCard p {
+  text-align: center;
+  font-size: 20px;
+  font-family: var(--Inter);
+  font-weight: 600;
+}
+#testimonials .cards .reviewCard .rank {
+  justify-self: flex-end;
+  position: absolute;
+  bottom: 24px;
+  font-family: var(--Inter);
+  font-weight: 400;
+  color: var(--grey-text-color);
+}
+#testimonials .cards .reviewCard .userName {
+  font-weight: 600;
+  font-family: var(--Poppins);
+  font-size: 20px;
+  position: absolute;
+  bottom: 43px;
+}
+#testimonials .cards .reviewCard .ratingStars {
+  position: absolute;
+  bottom: 80px;
+  display: flex;
+  color: var(--button-color);
+}
+#testimonials .cards .reviewCard .ratingStars i {
+  margin: 0 2px;
+}
+
+#getStarted {
+  height: 680px !important;
+}
+#getStarted .startFrame {
+  height: 480px !important;
+}
+
+footer {
+  width: 100%;
+  height: 280px;
+  display: flex;
+  background-color: var(--before-element-color);
+  justify-self: end;
+  align-self: end;
+}
+footer div, footer ul {
+  height: 100%;
+  width: 400px;
+  padding: 80px 0 0 80px;
+}
+footer .titler {
+  width: 600px;
+}
+footer .titler h1 {
+  font-family: var(--Poppins);
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+footer .titler .copyrightTxt {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: var(--Inter);
+  color: var(--grey-text-color);
+}
+footer ul li {
+  margin-bottom: 16px;
+}
+footer ul li a {
+  color: var(--link-color);
+  font-size: 16px;
+  font-family: var(--Inter);
+  text-decoration: none;
+}
+footer ul li a:hover {
+  color: var(--button-color);
+}
+
+/* --------------------------------------------------------STYLING THE SERVIVES PAGE-------------------------------------- */
+#prices {
+  width: 100%;
+  margin: 80px 0 12px 0;
+  padding: 64px 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#prices h1 {
+  font-family: var(--Poppins);
+  font-size: 48px;
+  font-weight: 600;
+}
+#prices h4 {
+  font-family: var(--Inter);
+  font-weight: 400;
+  font-size: 16px;
+}
+#prices .pricesWrapper {
+  margin-top: 98px;
+  width: 1064px;
+  height: 448px;
+  background-color: var(--element-color);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+#prices .pricesWrapper div {
+  width: 340px;
+  height: 100%;
+  padding: 72px 36px;
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+  position: relative;
+}
+#prices .pricesWrapper .webDevCard {
+  position: absolute;
+  top: -40px;
+  z-index: 2;
+  width: 414px;
+  height: 526px;
+  background-color: var(--element-color);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  /* left: 50%; */
+  margin-left: auto;
+  justify-self: center;
+}
+#prices .pricesWrapper .appDevCard {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+#prices .pricesWrapper .androidAppCard {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+#prices .pricesWrapper div h3 {
+  font-size: 20px;
+  font-family: var(--Poppins);
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+#prices .pricesWrapper div .price {
+  font-weight: 600;
+  font-size: 64px;
+  font-family: var(--Poppins);
+  display: flex;
+  margin-bottom: 12px;
+  line-height: 108px;
+}
+
+#prices .pricesWrapper div .price span {
+  font-size: 12px;
+  margin-top: 36px;
+  width: 40px;
+  font-weight: 800;
+  font-family: var(--Inter);
+  line-height: 16px;
+}
+
+#prices .pricesWrapper div .desc {
+  font-family: var(--Poppins);
+  font-size: 20px;
+  font-weight: 400;
+  width: 260px;
+}
+
+#prices .pricesWrapper div button {
+  margin: 0;
+  width: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 36px;
+}
+
+#prices .pricesWrapper .webDevCard button {
+  bottom: 75px;
+  width: 342px;
+}
+
+#features {
+  width: 100%;
+  height: 640px;
+  margin-top: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#features .headerTxt {
+  width: 100%;
+  padding: 0 120px;
+}
+#features .headerTxt h2 {
+  font-size: 32px;
+  font-family: var(--Poppins);
+  font-weight: 600;
+  text-align: left;
+  margin-bottom: 64px;
+}
+#features .allFeatures {
+  display: flex;
+  justify-content: space-between;
+  width: 936px;
+  height: 640px;
+  align-items: center;
+  position: relative;
+}
+#features .allFeatures div {
+  width: 280px;
+  height: 100%;
+}
+#features .allFeatures div h3 {
+  font-size: 28px;
+  font-family: var(--Inter);
+  font-weight: 600;
+  margin-bottom: 48px;
+}
+#features .allFeatures div ul li {
+  display: flex;
+  line-height: 28px;
+  font-size: 16px;
+  font-family: var(--Inter);
+  font-weight: 400;
+  color: var(--link-color);
+  width: 280px;
+  margin-bottom: 12px;
+  justify-content: space-between;
+}
+#features .allFeatures div ul li i {
+  height: 24px;
+  min-width: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--button-color);
+  color: var(--white);
+  border-radius: 50px;
+  margin: 2px 12px 0 0;
+}
+#features .allFeatures div ul li span {
+  width: 244px;
+}
+#features .allFeatures div:last-of-type {
+  width: 240px;
+}
+#features .allFeatures::before {
+  content: "";
+  width: 936px;
+  height: 2px;
+  background-color: var(--grey-text-color);
+  position: absolute;
+  top: 64px;
+}
+
+#freQs {
+  width: 100%;
+  min-height: 960px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 120px 0 0 0;
+}
+#freQs .illustration {
+  margin-bottom: 64px;
+}
+#freQs h2 {
+  font-size: 48px;
+  font-family: var(--Poppins);
+  font-weight: 600;
+  width: 600px;
+  text-align: center;
+  margin-bottom: 80px;
+}
+#freQs ul {
+  width: 640px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#freQs ul .quest {
+  width: 100%;
+  max-height: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 2px solid var(--grey-text-color);
+  padding: 0 8px;
+  overflow-y: hidden;
+  transition: all 0.3s ease-out;
+}
+#freQs ul .quest span {
+  font-family: var(--Inter);
+  font-weight: 400;
+  margin-top: 18px;
+  justify-content: space-between;
+  width: 100%;
+  display: flex;
+  cursor: pointer;
+}
+#freQs ul .quest .answer {
+  width: 100%;
+  background-color: var(--element-color);
+  border-radius: 8px;
+  padding: 0;
+  box-shadow: var(--shadow);
+  padding: 24px 32px;
+  margin: 24px 0;
+}
+#freQs ul .quest .answer p {
+  font-family: var(--Poppins);
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--text-color);
+}
+#freQs ul .quest.active {
+  max-height: 800px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* -----------------------------------------------STYLING THE ABOUT US PAGE--------------------------------------------- */
+#aboutSect {
+  width: 100%;
+  margin-top: 80px;
+  padding: 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#aboutSect h2 {
+  font-size: 48px;
+  font-family: var(--Poppins);
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+#aboutSect .subHead {
+  font-size: 16px;
+  font-family: var(--Inter);
+  font-weight: 400;
+  width: 640px;
+  text-align: center;
+}
+#aboutSect .illustration {
+  margin: 64px 0 120px 0;
+}
+#aboutSect .unlockSect {
+  width: 840px;
+  height: 320px;
+  margin-top: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#aboutSect .unlockSect .text {
+  height: 100%;
+  width: 240px;
+}
+#aboutSect .unlockSect .text p {
+  font-family: var(--Poppins);
+  font-size: 32px;
+  font-weight: 600;
+}
+#aboutSect .unlockSect .illustration {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#teamSect {
+  width: 100%;
+  margin-top: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 480px;
+}
+#teamSect h3 {
+  font-family: var(--Poppins);
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+#teamSect h6 {
+  font-size: 16px;
+  font-family: var(--Inter);
+  font-weight: 400;
+}
+#teamSect .teamWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 80px;
+}
+#teamSect .teamWrapper .member {
+  width: 200px;
+  height: 240px;
+  margin: 0 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+#teamSect .teamWrapper .member .memAvatar {
+  width: 160px;
+  height: 160px;
+  background-color: var(--button-color);
+  border-radius: 50%;
+}
+#teamSect .teamWrapper .member .memInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#teamSect .teamWrapper .member .memInfo .memName {
+  font-size: 20px;
+  font-family: var(--Poppins);
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+#teamSect .teamWrapper .member .memInfo .memRank {
+  font-family: var(--Inter);
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--grey-text-color);
+}
+
+/* -----------------------------------------STYLING THE CONTACT US PAGE------------------------------------------------------- */
+#msgSect {
+  width: 100%;
+  margin-top: 80px;
+  padding: 64px 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#msgSect h2 {
+  font-size: 48px;
+  font-family: var(--Poppins);
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+#msgSect p {
+  font-family: var(--Inter);
+  font-weight: 400;
+  font-size: 20px;
+  width: 280px;
+  text-align: center;
+}
+#msgSect .msgUs {
+  width: 960px;
+  height: 500px;
+  margin-top: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#msgSect .msgUs .illustration {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#msgSect .msgUs form {
+  display: flex;
+  flex-direction: column;
+  width: 440px;
+  height: 100%;
+}
+#msgSect .msgUs form label {
+  font-weight: 400;
+  font-size: 16px;
+  font-family: var(--Inter);
+  margin-top: 12px 0;
+}
+#msgSect .msgUs form input {
+  width: 100%;
+  height: 48px;
+  padding: 0 24px;
+  display: flex;
+  justify-content: center;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  margin: 12px 0;
+  font-family: var(--Inter);
+  font-size: 16px;
+  font-weight: 400;
+  outline: 0;
+}
+#msgSect .msgUs form textarea {
+  outline: 0;
+  width: 100%;
+  height: 120px;
+  padding: 12px 24px;
+  resize: none;
+}
+#msgSect .msgUs form input, #msgSect .msgUs form textarea {
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  margin: 12px 0;
+  font-family: var(--Inter);
+  font-size: 16px;
+  font-weight: 400;
+  outline: 0;
+  background-color: var(--element-color);
+  color: var(--text-color);
+}
+#msgSect .msgUs form input::placeholder,
+#msgSect .msgUs form textarea::placeholder {
+  color: var(--grey-text-color);
+}
+#msgSect .msgUs form button {
+  margin: 36px 0;
+  width: 100%;
+}
+
+#newsletter {
+  margin-top: 64px;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#newsletter h2 {
+  font-size: 32px;
+  font-family: var(--Poppins);
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+#newsletter p {
+  font-size: 16px;
+  font-family: var(--Inter);
+  font-weight: 400;
+  width: 320px;
+  text-align: center;
+}
+#newsletter form {
+  margin-top: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 600px;
+  height: 56px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+#newsletter form input {
+  height: 100%;
+  width: 400px;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  background-color: var(--element-color);
+  font-size: 16px;
+  font-family: var(--Inter);
+  font-weight: 400;
+  color: var(--text-color);
+  outline: 0;
+}
+#newsletter form input::placeholder {
+  color: var(--grey-text-color);
+}
+#newsletter form button {
+  width: 200px;
+  height: 100%;
+  margin: 0;
+  border-radius: 0;
+}
+
+/* -------------------------------------------------STYLING THE 404 ERROR PAGE------------------------------------------------------- */
+#error404main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+#error404main h2 {
+  font-family: var(--Poppins);
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 64px;
+}
+#error404main button {
+  width: 240px;
+  margin-top: 48px;
+}
+
+#error404main #error404main body.darkMode {
+  --background-color: #151718;
+  --text-color: #FDFDFD;
+  --element-color: #292C2D;
+  --button-color: #618FCA;
+  --grey-text-color: #90969D;
+  --link-color: #B2CAEE;
+  --before-element-color: #1D1F20;
+  --shadow: 0px 4px 32px rgba(0, 0, 0, 0.25);
+}
+
+/*# sourceMappingURL=newstyles.css.map */

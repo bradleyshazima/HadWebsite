@@ -9,8 +9,8 @@
         <h1>All your IT Business solutions in one place</h1>
         <p>We have what you need to kick start your business and tools to help you track your sales and run your business online to reach your potential customers</p>
         <div class="buttons">
-            <button class="blue_button" onclick="window.location.href = 'services.html';">Get Started</button>
-            <button class="trans_button" onclick="window.location.href = 'services.html#features';">View Our Products</button>
+            <button class="blue_button" onclick="window.location.href = '{% url 'services' %}';">Get Started</button>
+            <button class="trans_button" onclick="window.location.href = '{% url 'services' %}#features';">View Our Products</button>
         </div>
     </div>
     <div class="illustrationSide">
@@ -23,7 +23,7 @@
         <div class="text">
             <h2>Complete Customizable Business Solutions</h2>
             <p>Maximize your business's potential with our user-friendly solutions and streamline your operations with the best POS software, beautifully designed websites and top-tier apps from our team.</p>
-            <button class="blue_button" onclick="window.location.href = 'services.html';">Get Started</button>
+            <button class="blue_button" onclick="window.location.href = '{% url 'services' %}';">Get Started</button>
         </div>
         <div class="illustration">
             <img src="{% static 'hadapp/images/Starting_business.svg' %}" alt="">
@@ -65,7 +65,7 @@
         <div class="text">
             <h2>Why join our community?</h2>
             <p>Discover the benefits of joining our community of entrepreneurs and innovators. Get access to exclusive resources, events, and expert advice to help your business thrive.</p>
-            <button class="blue_button" onclick="window.location.href = 'contact.html#newsletter';">Join Us Now</button>
+            <button class="blue_button" onclick="window.location.href = '{% url 'contact' %}#newsletter';">Join Us Now</button>
         </div>
         <div class="illustration">
             <img src="{% static 'hadapp/images/Group_chat.svg' %}" alt="">
@@ -116,9 +116,6 @@
         </div>
 </section>
 
-<section id="getStarted">
-
 {% include 'hadapp/getstarted.html' %}
-
 
 {% endblock body %}
